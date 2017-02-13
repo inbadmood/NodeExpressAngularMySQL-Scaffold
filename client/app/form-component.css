@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+.entryForm {
+  display: block;
+  font-family: 'Exo 2', sans-serif;
+  margin: 10px ;
+  padding: 20px;
+  height: 80%;
+  overflow: scroll;
+}
+
+.entryForm[hidden="true"] {
+  display: none;
+}
+
+.form-row {
+  background-color: white;
+  width: 100%;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.form-row > label {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+
+.acknowledgement {
+  width: 80%;
+  min-height: 50px;
+  padding-top: 20px;
+  font-family: 'Exo 2', sans-serif;
+  background-color: white;
+  color: rgba(255, 0, 255, 1);
+  text-align: center;
+  font-size: 80%;
+  margin: auto;
+}
+
+.acknowledgement[hidden="true"] {
+  display: none;
+}
+
+input {
+  border: none;
+}
+
+.emailInput, .fnameInput, .lnameInput, .backgroundInput, .acknowledgement {
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 100%;
+  background-color: white;
+  color: gray;
+  border-bottom: 1px dotted gray;
+  text-indent: 10px;
+  clear: left;
+}
+
+.acknowledgement {
+  display: block;
+}
+
+.acknowledgement[hidden="true"] {
+  display : none;
+}
+
+.emailInput:focus {
+  outline-width: 0px;
+  outline: none;
+}
+
+
+.submitButton {
+  border: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 1);
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 120%;
+  float: left;
+
+}
+
+.warning {
+  width: 100%;
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-size: 75%;
+  text-align: center;
+}

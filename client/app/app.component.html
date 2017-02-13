@@ -1,0 +1,36 @@
+<div class="headerbox">
+		<h3>Node Server, Angular Front-End, mySQL Database</h3>
+</div>
+<div class="bodyBox">
+	<h3 class="top">This is an example of how to scaffold a web application using a node.js server implemented with Express, Angular client-facing interface, and a mySQL database.</h3>
+	<h3>Use the buttons below to make a GET, PUT and POST requests to the database.</h3>
+</div>
+<div class="buttons">
+	<button class="requestButton" (click)="this.getRecords()">
+		GET records
+	</button>
+</div>
+<div class="results">
+  <div class="resultEntry" *ngFor="let r of this.records">
+    <div class="name">
+      {{r.firstName}} {{r.lastName}}
+    </div>
+    <div class="background">
+      {{r.background}}
+    </div>
+    <div class="email">
+      {{r.email}}
+    </div>
+    <button class="deleteButton" (click)="this.delete(r.email)">
+      Delete
+    </button>
+  </div>
+</div>
+<div class="buttons">
+	<button class="requestButton" (click)="this.toggleForm()">
+		POST a new record
+	</button>
+</div>
+<div class="formContainer">
+	<form-component [hidden]="this.hideForm" (didSubmit)="this.setHideStatus($event)"></form-component>
+</div>

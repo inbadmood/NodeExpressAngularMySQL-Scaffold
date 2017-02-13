@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+  background-color: white;
+  margin: 0px;
+}
+
+h1 {
+  color: blue;
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  font-size: 100%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid blue;
+  width: 80%;
+  height: 100px;
+  line-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+.myButton {
+  color: red;
+  background-color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  font-size: 100%;
+  text-align: center;
+  margin-top: 50px;
+  border: 1px solid red;
+  width: 20%;
+  height: 100px;
+  line-height: 100px;
+  margin-left: 10%;
+  float: left;
+}

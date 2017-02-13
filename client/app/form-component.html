@@ -1,0 +1,54 @@
+<div class="entryForm" [attr.hidden]="this.hidden">
+    <div class="formRow">
+      <form [formGroup]="emailForm" (ngSubmit)="this.onSubmit()" novalidate>
+        <div class="form-group">
+          <div class="form-row">
+            <label>
+              Please enter first name:
+            </label>
+            <input class="fnameInput" formControlName="firstName" [attr.valid]="this.emailForm.controls['firstName'].valid">
+            <div class="warning" *ngIf="!emailForm.controls['firstName'].valid">
+              You must enter a first name name of at least two characters.
+            </div>
+          </div>
+          <div class="form-row">
+            <label>
+              Please enter last name:
+            </label>
+            <input class="lnameInput" formControlName="lastName" [attr.valid]="this.emailForm.controls['lastName'].valid">
+            <div class="warning" *ngIf="!emailForm.controls['lastName'].valid">
+              You must enter a last name name of at least two characters.
+            </div>
+          </div>
+          <div class="form-row"><label>Please enter background:</label><select class="backgroundInput" formControlName="background" [attr.valid]="this.emailForm.controls['background'].valid">
+              <option disabled selected value> Please select an option</option>
+              <option>Developer</option>
+              <option>Academic</option>
+              <option>Individual</option>
+              <option>Professional</option>
+            </select>
+            <div class="warning" *ngIf="!emailForm.controls['background'].valid">
+              You must select an option.
+            </div>
+          </div>
+          <div class="form-row">
+            <label>
+              Please enter email:
+            </label>
+            <input class="emailInput" formControlName="emailAddress" [attr.valid]="this.emailForm.controls['emailAddress'].valid">
+            <div class="warning" *ngIf="!emailForm.controls['emailAddress'].valid">
+              Please enter a valid e-mail address
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <button type="submit" class="btn btn-primary submitButton" [disabled]="!this.emailForm.valid">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="acknowledgement" [attr.hidden]="!this.hidden">
+  {{this.acknowledgementText}}
+</div>
