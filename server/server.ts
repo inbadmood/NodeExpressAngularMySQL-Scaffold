@@ -26,7 +26,7 @@ var client = mysql.createConnection({
 // GET requests
 app.get('/records', (_, res) => {
 
-  const sql = 'SELECT * FROM beta_mailing_list';
+  const sql = 'SELECT * <tablename>';
 
   console.log("Sending query!");
 
@@ -52,7 +52,7 @@ app.put('/deleterecord', function(req, res) {
 
   let email = encodeURI(req.body.email);
 
-  const sql = 'DELETE FROM beta_mailing_list WHERE email="'+email+'"';
+  const sql = 'DELETE FROM <tablename> WHERE email="'+email+'"';
 
   const query = client.query(sql, function(err, rows, fields) {
       if (!err) {
@@ -78,7 +78,7 @@ app.post('/post', function(req, res) {
   const background = encodeURI(req.body.background);
   const email = encodeURI(req.body.emailAddress);
 
-  var sql = 'INSERT INTO beta_mailing_list (firstName, lastName, background, email, termsandconditions) VALUES ("'+fname+'", "'+lname+'", "'+background+'", "'+email+'", "accept")';
+  var sql = 'INSERT INTO <tablename> (firstName, lastName, background, email, termsandconditions) VALUES ("'+fname+'", "'+lname+'", "'+background+'", "'+email+'", "accept")';
 
   const query = client.query(sql);
 
