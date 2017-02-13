@@ -1,12 +1,12 @@
 {
-  "name": "octachoron",
+  "name": "node-express-angular-mysql",
   "version": "1.0.0",
-  "description": "main site for Octachoron Limited",
+  "description": "scaffold for node express angular mysql web application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Marcus Chandler, Octachoron Limited",
+  "author": "mpj-chandler",
   "license": "ISC",
   "dependencies": {
     "@angular/common": "~2.1.1",
