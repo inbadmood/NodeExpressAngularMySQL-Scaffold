@@ -1,4 +1,4 @@
-# NodeExpressAngularMySQL-Scaffold
+# Node Express Angular 2 MySQL Scaffold
 A simple scaffold for a node.js / Express / Angular / MySQL web application.
 
 Once you have cloned the repository run npm install to install the dependencies and then tsc to compile the modules (if you are not using an auto-compiler). 
